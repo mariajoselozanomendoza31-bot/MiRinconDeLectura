@@ -91,16 +91,29 @@ nav a {
     padding: 8px;
 }
 
-nav a:hover {
-    background-color: #1976b9;
-    border-radius: 5px;
-}
 
 nav a.activo {
-    background-color: #1976b9;
+    background-color: #2419b9;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: rgba(30, 255, 0, 0.336);
+    border-color: 5px solid#0d0d0e;
     border-radius: 5px;
 }
 
+
+nav a:focus {
+    border-radius: 3px ;
+    outline: 3px solid rgb(160, 187, 10);
+
+
+}
+
+ a:visited {
+    color: purple;
+
+}
 /* ===================================
    BIENVENIDA
 =================================== */
@@ -126,14 +139,16 @@ nav a.activo {
     text-decoration: none;
     border-radius: 6px;
 }
-
+.boton:active {
+    background-color: red;
+}
 
 /* ===================================
    GÉNEROS LITERARIOS
 =================================== */
 
 #generos {
-    background-color: #e8f2fb;
+    background-color: white;
     padding: 20px;
     text-align: center;
 }
@@ -148,6 +163,9 @@ nav a.activo {
     padding: 15px;
     border: 1px solid #c5d8eb;
     border-radius: 8px;
+}
+.genero:hover {
+    background-color: yellow;
 }
 
 .genero h3 {
@@ -208,21 +226,35 @@ nav a.activo {
 .tarjeta p {
     font-size: 15px;
 }
+.tarjeta:hover
+{
+ border: 2px solid red;
+} 
 
 
 /* ===================================
    OTRAS RECOMENDACIONES
 =================================== */
 
-#otros-libros {
-    background-color: #fff5e5;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+#otros-libros ul li:first-child {
+    color: #2419b9;
+font-weight: bold;
 }
+    
+    
+    
 
-#otros-libros li {
+
+#otros-libros ul li:last-child {
     margin: 8px;
+    color: green
+}
+#otros-libros ul li:nth-child(even){
+    background-color: grey;
+}
+#otros-libros ul li:nth-child(3){
+    font-size: 20px;
+
 }
 
 
