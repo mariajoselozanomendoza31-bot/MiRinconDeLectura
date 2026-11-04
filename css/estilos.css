@@ -1,7 +1,13 @@
 /* ===================================
    ESTILOS GENERALES
 =================================== */
-
+@font-face {
+    font-family:"Maria" ;
+    src: url(../font/MeaCulpa-Regular.ttf) format(truetype);
+}
+hi, h2, h3 {
+    font-family: "Maria", sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #faf8f3;
@@ -65,7 +71,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 85%;
-   
+
 
 
 
@@ -96,6 +102,7 @@ nav a.activo {
     background-color: #2419b9;
     border-radius: 5px;
 }
+
 nav a:hover {
     background-color: rgba(30, 255, 0, 0.336);
     border-color: 5px solid#0d0d0e;
@@ -104,16 +111,17 @@ nav a:hover {
 
 
 nav a:focus {
-    border-radius: 3px ;
+    border-radius: 3px;
     outline: 3px solid rgb(160, 187, 10);
 
 
 }
 
- a:visited {
+a:visited {
     color: purple;
 
 }
+
 /* ===================================
    BIENVENIDA
 =================================== */
@@ -121,13 +129,14 @@ nav a:focus {
 #inicio {
     padding: 20px;
     background-color: white;
-
+    display: flex;
 }
 
 #inicio img {
+    text-align: right;
     width: 350px;
     border-radius: 10px;
-    
+
 }
 
 .boton {
@@ -139,9 +148,14 @@ nav a:focus {
     text-decoration: none;
     border-radius: 6px;
 }
+
 .boton:active {
     background-color: red;
 }
+#biblioteca{
+    width: 65%;
+}
+
 
 /* ===================================
    GÉNEROS LITERARIOS
@@ -152,7 +166,9 @@ nav a:focus {
     padding: 20px;
     text-align: center;
 }
-
+.genero img {
+width: 45px;
+}
 .genero {
     display: inline-block;
     vertical-align: top;
@@ -164,6 +180,7 @@ nav a:focus {
     border: 1px solid #c5d8eb;
     border-radius: 8px;
 }
+
 .genero:hover {
     background-color: yellow;
 }
@@ -182,6 +199,11 @@ nav a:focus {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
+    display: flex;
+}
+#recomendacion img {
+    margin-right:20px ;
+    height: auto;
 }
 
 .portada {
@@ -205,7 +227,9 @@ nav a:focus {
 #catalogo {
     text-align: center;
 }
-
+#parrafos {
+text-align: left;
+}
 .tarjeta {
     display: inline-block;
     vertical-align: top;
@@ -226,10 +250,10 @@ nav a:focus {
 .tarjeta p {
     font-size: 15px;
 }
-.tarjeta:hover
-{
- border: 2px solid red;
-} 
+
+.tarjeta:hover {
+    border: 2px solid red;
+}
 
 
 /* ===================================
@@ -238,21 +262,27 @@ nav a:focus {
 
 #otros-libros ul li:first-child {
     color: #2419b9;
-font-weight: bold;
+    font-weight: bold;
 }
+#varioslibros {
+    display: flex;
+    justify-content: space-around;
     
-    
-    
+}
+
+
 
 
 #otros-libros ul li:last-child {
     margin: 8px;
     color: green
 }
-#otros-libros ul li:nth-child(even){
+
+#otros-libros ul li:nth-child(even) {
     background-color: grey;
 }
-#otros-libros ul li:nth-child(3){
+
+#otros-libros ul li:nth-child(3) {
     font-size: 20px;
 
 }
@@ -271,4 +301,16 @@ footer {
 
 footer a {
     color: white;
+}
+footer img {
+
+    border-radius: 75px;
+height: 25px;
+margin: 0% ;padding: 0%;
+margin-right: 20px;
+
+
+}
+#imagenes{
+    text-align: right;
 }
