@@ -103,6 +103,11 @@ nav a.activo {
     margin: 10px;
     text-decoration: none;
     border-radius: 6px;
+    transition: transform 3s, background-color 3s;
+}
+.boton:hover{
+    transform: scale(2.5);
+    background-color: red;
 }
 
 
@@ -148,6 +153,10 @@ nav a.activo {
     width: 130px;
     border-radius: 5px;
 }
+.portada:hover{
+    /*transform: scale(0.5);*/ 
+    transform:rotate(15deg);
+}
 
 .cita {
     background-color: #fff5e5;
@@ -177,14 +186,21 @@ nav a.activo {
     padding: 15px;
     margin: 8px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(219, 7, 7, 0.651);
+    transition: transform 5s ease, box-shadow 5s ease;
+    
 }
-
 .tarjeta h3 {
     font-size: 20px;
 }
 
 .tarjeta p {
     font-size: 15px;
+}
+.tarjeta:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(228, 14, 14, 0.637);
+
 }
 
 
@@ -219,3 +235,93 @@ footer a {
     color: white;
 }
 
+@Keyframes cambiarColor {
+0%{
+    color: #0d85db;
+}
+50%{
+    color: #c91818;
+}
+100%{
+    color: #0aaa52;
+}
+}
+h1{
+    animation: cambiarColor;
+    animation-duration: 10s;
+    animation-direction: alternate;
+
+    animation-iteration-count: infinite;
+
+}
+@Keyframes mover{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        
+        transform: translateX(200px);
+    }
+}
+
+    .tarjeta{
+        animation: mover 3s ease-in;
+    }
+
+@Keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.portada{
+    animation: girar 3s;
+}
+@Keyframes aparecer{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+    }
+}
+#inicio{
+    animation: aparecer 5s;
+}
+@Keyframes palpita{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+    
+
+
+}
+#inicio img{
+    animation: palpita 3s infinite;
+}
+@Keyframes retraso{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+    }
+    
+    
+    
+}
+.h1{    
+    animation: retraso 5s infinite;
+
+}
